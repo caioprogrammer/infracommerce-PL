@@ -1,0 +1,193 @@
+.header {
+    &__top {
+        background-color: $principal-blue;
+        .content {
+            padding: 0 40px;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            @media screen and (max-width: 996px) {
+                padding: 16px;
+                min-height: 80px;
+            }
+            .top-banner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                font-size: 14px;
+                @media screen and (max-width: 996px) {
+                    font-size: 12px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                }
+                .options {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    a, .dropdown-label {
+                        font-weight: 600;  
+                    }
+                }
+            }
+        }
+    }
+    &__bottom {
+        &-content {
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        @media screen and (max-width: 996px) {
+            border-top: 4px solid #81d8d0;
+        }
+            .left {
+                @media screen and (max-width: 996px) {
+                    flex-basis: 0;
+                    flex-grow: 1;
+                }
+                display: flex;
+                > div {
+                    margin-right: 40px;
+                }
+                .search, .location, .concierge {
+                    @media screen and (max-width: 996px) {
+                        display: none;
+                    }
+                }
+                .concierge a {
+                    display: flex;
+                    align-items: center;
+                    span {
+                        margin-right: 8px;
+                    }
+                    label {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .central {
+                @media screen and (max-width: 996px) {
+                    flex-basis: 0;
+                    flex-grow: 1;
+                }
+                img {
+                    max-height: 26px;
+                    @media screen and (max-width: 996px) {
+                        max-width: 130px;
+                    }
+                }
+            }
+            .right {
+                display: flex;
+                @media screen and (max-width: 996px) {
+                    flex-basis: 0;
+                    flex-grow: 1;
+                    justify-content: flex-end;
+                }
+                > div {
+                    margin-left: 40px;
+                    @media screen and (max-width: 996px) {
+                        margin-left: 16px;
+                    }
+                }
+                .customer {
+                    @media screen and (max-width: 996px) {
+                        display: none;
+                    }
+                }
+                .appointment {
+                    @media screen and (max-width: 996px) {
+                        display: none;
+                    }
+                    a {
+                        display: flex;
+                        align-items: center;
+                        span {
+                            margin-right: 8px;
+                        }
+                        label {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+        &-nav {
+            padding: 0px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            @media screen and (max-width: 992px) {
+                position: fixed;
+                top: 0;
+                left: 0;
+                background-color: #fff;
+                width: 100%;
+                max-width: calc(100% - 40px);
+                flex-direction: column;
+                height: 100%;
+                display: none;
+            }
+        }
+    }
+
+    &-icon {
+        width: 16px !important;
+        height: 16px !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        &.menu-open {
+            background-image: url(./assets/images/normal/Hamburger-Menu.svg);
+        }
+        &.appointment {
+            background-image: url(./assets/images/normal/Appointment-normal.svg);
+            &:hover {
+                background-image: url(./assets/images/hovered/appointment-hovered.gif);
+            }
+        }
+        &.customer {
+            background-image: url(./assets/images/normal/MyAccount-normal.svg);
+            &:hover {
+                background-image: url(./assets/images/hovered/my-account-hovered.gif);
+            }
+        }
+        &.wishlist {
+            background-image: url(./assets/images/normal/Wishlist-normal.svg);
+            &:hover {
+                background-image: url(./assets/images/hovered/wishlisticon-hovered.gif);
+            }
+        }
+        &.cart {
+            background-image: url(./assets/images/normal/ShoppingBag-normal.svg);
+            &:hover {
+                background-image: url(./assets/images/hovered/shoppingbag-hovered.gif);
+            }
+        }
+    
+        &.concierge {
+            background-image: url(./assets/images/normal/Concierge-normal.svg);
+            &:hover {
+                background-image: url(./assets/images/hovered/concierge-hovered.gif);
+            }
+        }
+        &.location {
+            background-image: url(./assets/images/normal/StoreLocator-normal.svg);
+            &:hover {
+                background-image: url(./assets/images/hovered/store-locator-hovered.gif);
+            }
+        }
+        &.search {
+            background-image: url(./assets/images/normal/Search-normal.svg);
+            &:hover {
+                background-image: url(./assets/images/hovered/search-icon-hovered.gif);
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+// Colors Variables 
+
+$principal-blue: #81d8d0;
+$principal-black: #000000;
+$principal-white: #ffffff;
+$principal-border: #cccccc;
+
+@font-face {
+    font-family: "Santral W01";
+    src: url(https://snaps-tiffany-webfonts.s3.amazonaws.com/sandral-light.otf);
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Santral W01";
+    src: url(https://snaps-tiffany-webfonts.s3.amazonaws.com/taner-ardali-santral-semibold.otf);
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Santral Book";
+    src: url(https://snaps-tiffany-webfonts.s3.amazonaws.com/taner-ardali-santral-book-2.otf);
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Santral Book";
+    src: url(https://snaps-tiffany-webfonts.s3.amazonaws.com/taner-ardali-santral-book-2.otf);
+    font-weight: 400;
+    font-style: normal
+}
+
+ul {
+    &.list {
+        a {
+            position: relative;
+            &::after {
+                content: "";
+                width: 0%;
+                height: 1px;
+                background-color: $principal-blue;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: ease .5s width;
+            }
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

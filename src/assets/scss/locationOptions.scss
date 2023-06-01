@@ -1,0 +1,77 @@
+.top-container {
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background: $principal-blue;
+    padding: 24px 0 40px 40px;
+
+    @media screen and (max-width: 996px) {
+        top: 80px;
+    }
+
+    div {
+        @media screen and (max-width: 996px) {
+            h3 {
+                padding-bottom: 16px;
+
+                &.active {
+                    ~ul {
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            width: 432px;
+
+            @media screen and (max-width: 996px) {
+                width: auto;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex: 0 1 auto;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            height: 232px;
+            padding-right: 40px;
+            padding-left: 0;
+
+            @media screen and (max-width: 996px) {
+                height: 100%;
+                padding-right: 0;
+                padding-left: 40px;
+                max-height: 0;
+                overflow: hidden;
+            }
+
+
+            li {
+                margin-bottom: 16px;
+                margin-right: 40px;
+
+                @media screen and (max-width: 996px) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+    }
+
+    &.active {
+        display: flex;
+        justify-content: space-between;
+        z-index: 9;
+
+        @media screen and (max-width: 996px) {
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.nav {
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    @media screen and (max-width: 992px) {
+        height: 100%;
+    }
+        
+    .subcategories {
+        &__container {
+            display: none;
+        }
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+            height: 100%;
+
+            align-items: baseline;
+            justify-content: flex-start;
+        }
+        li {
+            padding: 0px 28px;
+            font-size: 14px;
+            &:hover {
+                > .subcategories {
+                    &__container {
+                        display: flex;
+                    }
+                }
+            }
+            > .subcategories {
+                &__container {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background-color: #FFFFFF;
+                    width: 100%;
+                    justify-content: space-evenly;
+                    padding: 24px;
+                    display: none;
+                    z-index: 9;
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 20px;
+                        background-color: transparent;
+                        position: absolute;
+                        top: -18px;
+                    }
+                    .list {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        h3 {
+                            margin-bottom: 8px;
+                            font-weight: 700;
+                            font-size: 14px;
+                        }
+                        li {
+                            margin: 8px 0;
+                            padding: 0;
+                            &.has-image {
+                                max-width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+}

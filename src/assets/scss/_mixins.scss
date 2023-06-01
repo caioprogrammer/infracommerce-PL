@@ -1,0 +1,13 @@
+@mixin hoverEffect {
+    background: -webkit-gradient(linear,left bottom,left top,from(#00a4b7),to(#00a4b7)) 0 100% no-repeat;
+    background: linear-gradient(0,#00a4b7,#00a4b7) 0 100% no-repeat;
+    background-color: none !important;
+    background-size: 0 1px;
+    -webkit-transition: background-size .5s;
+    transition: background-size .5s;
+    text-decoration: none;
+    display: inline !important;
+    &:hover {
+        background-size: 100% 1px;
+    }
+}
