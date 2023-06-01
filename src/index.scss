@@ -84,6 +84,12 @@
             padding-bottom: 14px;
         }
     }
+    &:last-child {
+        text-align: center;
+        .title {
+            padding-top: 40px;
+        }
+    }
 }
 
 .fa-chevron-right {
@@ -509,4 +515,21 @@ a, .a {
     @media screen and (max-width: 992px) {
         display: none;
     }
+}
+
+.swiper-button-next::after {
+    background-image: url(./assets/images/normal/arrow-swiper.svg);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+}
+
+.swiper-button-prev::after {
+    background-image: url(./assets/images/normal/arrow-swiper.svg);
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
 }

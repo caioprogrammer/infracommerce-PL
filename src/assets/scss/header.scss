@@ -129,10 +129,27 @@
                 left: 0;
                 background-color: #fff;
                 width: 100%;
-                max-width: calc(100% - 40px);
+                max-width: 100%;
                 flex-direction: column;
                 height: 100%;
-                display: none;
+                visibility: hidden;
+                left: -1999px;
+                transition: ease .5s;
+                z-index: 1999;
+                border-top: 4px solid #81d8d0;
+                .menu-close {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding: 16px 0;
+                    width: 100%;
+                    position: relative;
+                    z-index: 999999;
+                }
+            }
+            &.active {
+                left: 0;
+                visibility: visible;
             }
         }
     }

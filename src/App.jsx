@@ -30,6 +30,7 @@ function App() {
       <section>
       <VideoPlayer
         video="//media.tiffany.com/is/content/tiffanydm/TiffanyLandmark_6sCutdownFloral_1920x1080"
+        videoMobile="//media.tiffany.com/is/content/tiffanydm/TiffanyLandmark_6sCutdownFloral_1080x1080"
         title="Now Open: The Landmark"
         subtitle="A legacy of brilliance continues with The Landmark. Discover a new Tiffany & Co. for a new era at 727 Fifth Avenue, New York."
         link="#"

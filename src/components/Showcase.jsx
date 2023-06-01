@@ -1,29 +1,13 @@
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide} from 'swiper/react';
+import ProductCard from './ProductCard';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 import { products } from "../constants/data"
-import { useState } from 'react';
 import { useEffect } from 'react';
-
-function ProductCard({product}) {
-    return (
-        <li className="product">
-          <img 
-            src={product.src}
-            alt={product.title}
-          />
-          {/* <button id={product.id} >
-            <span style={{pointerEvents: 'none'}}>
-                COMPRAR
-            </span> 
-          </button> */}
-        </li>
-    )
-}
 
 function Showcase() {
     useEffect(() => {
