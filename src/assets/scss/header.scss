@@ -89,6 +89,10 @@
                     flex-grow: 1;
                     justify-content: flex-end;
                 }
+                &.active {
+                    position: relative;
+                    z-index: 2;
+                }
                 > div {
                     margin-left: 40px;
                     @media screen and (max-width: 996px) {

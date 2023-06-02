@@ -9,6 +9,22 @@ function Header() {
   const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
+    document.querySelector(".aside").addEventListener("mouseover", () => {
+      document.querySelector(".aside").classList.add('active')
+      document.querySelector(".right").classList.add("active")
+    })
+    document.querySelector(".aside").addEventListener("mouseout", () => {
+      document.querySelector(".aside").classList.remove('active');
+      document.querySelector(".right").classList.remove("active")
+    })
+    document.querySelector(".cart a").addEventListener("mouseover", () => {
+      document.querySelector(".aside").classList.add('active');
+      document.querySelector(".right").classList.add("active")
+    })
+    document.querySelector(".cart a").addEventListener("mouseout", () => {
+      document.querySelector(".aside").classList.remove('active');
+      document.querySelector(".right").classList.remove("active")
+    })
     function setMobileWidth() {
       if (window.innerWidth < 996) {
         setMobile(true)

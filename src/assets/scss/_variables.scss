@@ -93,7 +93,7 @@ a,
     position: absolute;
     top: 0;
     left: 0;
-    &__active {
+    &.active {
         visibility: visible;
     }
 }

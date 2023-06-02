@@ -1,27 +1,30 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
+import { products } from "../constants/data"
+import ProductCard from './ProductCard';
+
 function FloatCart() {
     const [hasProduct, setHasProduct] = useState(true);
     const inCartProducts = JSON.parse(localStorage.getItem('products'));
-    const createElement = function (){
-        if(inCartProducts) {
-            inCartProducts.map((item) => {
-                var temp = document.createElement('div');
-                temp.innerHTML = item;
-                updateCart(temp);
-            })
-        }
-    }
-    const updateCart = function (arr) {
-        document.querySelector(".aside__content ul").appendChild(arr);
-    }
+    
+    
+
     useEffect(() => {
-        createElement();
+        var cart = [];
+        cart.totalcart = 0;
+        document.querySelectorAll(".aside__content input[type=hidden]").forEach(function(item,i){
+            if(i===0) cart.totalcart = 0;
+            cart.totalcart += item.value++;
+        });
+        document.querySelector(".total-amount").append(cart.totalcart)
+        console.log(cart.totalcart)
+
     })
     return (
         <>
             <aside className="aside">
+                <div class="aside__header"></div>
                 {!hasProduct && 
                     <div className="aside__empty">
                         <div class="heading">Your Shopping Bag</div>
@@ -36,11 +39,25 @@ function FloatCart() {
                 }
                 
                 <div className="aside__content">
-                    <ul></ul>
+                    <ul>
+                        {/* {products.map((product, index) => ( */}
+                            <ProductCard product={products[0]} />
+                            <ProductCard product={products[2]} />
+                            <ProductCard product={products[4]} />
+                        {/* ))} */}
+                    </ul>
                 </div>
-                
+                <div className="aside__total">
+                    <button type="button" class="checkout-button">
+                        <div class="content">
+                            <span class="total-text">
+                                Estimated Total: <span class="total-amount">$</span>
+                            </span>
+                            <span class="cta-text-2">Checkout</span>
+                        </div>
+                    </button>
+                </div>
             </aside>
-            <div className="backdrop"></div>
         </>
     )
 }

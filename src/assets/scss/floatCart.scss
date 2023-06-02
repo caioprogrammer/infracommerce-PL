@@ -1,16 +1,34 @@
 .aside {
-    display: none;
     position: absolute;
-    top: 100%;
+    display: none;
+    top: -23px;
     right: 0;
     background: #ffffff;
     border-bottom: 2px solid #81d8d0;
     width: 100%;
-    max-width: 362px;
-    z-index: 1;
+    max-width: 386px;
+    z-index: -1;
     height: 100vh;
-    border: 1px solid;
+    max-height: 800px;
+    overflow: hidden;
     padding: 2.5vw 16px 0px 2.5vw;
+    transform: translateX(23px);
+    &__header {
+        height: 62px;
+        width: 100%;
+        background-color: #81d8d0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &.active {
+        display: block
+    }
+    &__content {
+        max-height: 600px;
+        overflow: hidden;
+        overflow-y: auto;
+    }
     &__empty {
         height: 100%;
         display: flex;
@@ -40,6 +58,34 @@
                 
                 font-size: 16px;
                 display: block;
+            }
+        }
+    }
+    &__total {
+        .checkout-button {
+
+            border: 0;
+            background-color: #000000;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: .875rem;
+            line-height: 1.14;
+            letter-spacing: normal;
+            font-weight: 600;
+            padding: 20px 32px;
+            outline: 0;
+            height: 54px;
+            border: 1px solid #000;
+            width: 100%;
+            margin-top: 32px;
+            .content {
+                display: flex;
+                justify-content: space-between;
+            }
+            &:hover {
+                background-color: #81d8d0;
+                color: #000;
+                border: 1px solid #000;
             }
         }
     }

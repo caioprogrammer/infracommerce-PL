@@ -13,30 +13,14 @@ function Showcase() {
     useEffect(() => {
         var stor = [];
         const products = document.querySelectorAll(".product");
-        // const removes = document.querySelectorAll("#remove");
         products.forEach((product) => {
             product.addEventListener("click", (e) => {
-                var id = e.target.outerHTML;
+                var id = e.target.id;
                 var item = e.target;
                 addRemoveProduct(id, item)
             })
         })
-
-        // removes.forEach((remove) => {
-        //     remove.addEventListener("click", (e) => {
-        //         var id = e.target.outerHTML;
-        //         var item = e.target;
-        //         removeProduct(id, item)
-        //     })
-        // })
-        // function removeProduct(id, item) {
-        //     id = id.toString();
-        //     if ( stor.indexOf(id) !== -1 ) {
-        //         var arrWithRemoveId = stor.filter(function(j){return j !== id;});
-        //         item.classList.remove('inCart');
-        //         stor = arrWithRemoveId;
-        //     }
-        // }
+        
         function addRemoveProduct(id, item) {
             id = id.toString();
             if ( stor.indexOf(id) === -1 ) {

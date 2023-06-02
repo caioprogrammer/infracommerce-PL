@@ -8,6 +8,7 @@ function ProductCard({product}) {
           <div className="product__infos">
             <div className="name">{product.title}</div>
             <div className="price">$ {product.price}</div>
+            <input type="hidden" value={product.price} />
           </div>
           {/* <button id="remove">Remove</button> */}
         </li>
