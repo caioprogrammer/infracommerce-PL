@@ -1,0 +1,84 @@
+.stories {
+    background-color: #fafafa;
+    padding: 30px 0;
+    h3.title {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 24px;
+        padding-bottom: 9px;
+    }
+    &__content {
+        display: block;
+        margin: 0 auto;
+        overflow: hidden;
+        .tile {
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            @media screen and (max-width: 992px){
+                flex-direction: column;
+                gap: 24px;
+                padding: 0 16px;
+            }
+            picture {
+                padding: 20px 20px 16px;
+                @media screen and (max-width: 992px){
+                    flex: 0 0 50%;
+                    padding: 10px 10px 8px;
+                }
+            }
+            .card {
+                display: -webkit-box;
+                display: flex;
+                flex: 0 0 calc(33.33333% - 36px);
+                flex-direction: column;
+                margin-right: 36px;
+                padding-bottom: 46px;
+                max-width: 407px;
+                cursor: pointer;
+                overflow: hidden;
+                border: 1px solid #ccc;
+                background-color: #fff;
+                @media screen and (max-width: 992px){
+                    margin-right: 0;
+                    max-width: 100%;
+                    flex-direction: row;
+                    padding-bottom: 0;
+                }
+                &-infos {
+                    padding: 36px 20px 0px;
+                    @media screen and (max-width: 992px){
+                        flex: 0 0 50%;
+                        padding: 18px 10px 0px;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .title {
+                        margin-bottom: 24px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-align: left;
+                    }
+                    .subtitle {
+                        padding-bottom: 14px;
+                        margin-bottom: 24px;
+                        font-weight: 300;
+                        line-height: 24px;
+                        font-size: 14px;
+                        @media screen and (max-width: 992px){
+                            display: none;
+                        }
+                    }
+                    a {
+                        font-weight: 600;
+                        font-size: 14px;
+                        @media screen and (max-width: 992px){
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

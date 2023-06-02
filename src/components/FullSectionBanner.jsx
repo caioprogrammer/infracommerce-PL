@@ -7,7 +7,7 @@ function FullSectionBanner(props) {
                         <source type="image/webp" media="(max-width: 900px)" srcSet={props.mobileBanner} />
                         <source media="(max-width: 900px)" srcSet={props.mobileBanner} />
                         <source type="image/webp" srcSet={props.desktopBanner} />
-                        <img src={props.desktopBanner} alt={props.bannerTitle} />
+                        <img  loading='lazy' src={props.desktopBanner} alt={props.bannerTitle} />
                     </picture>
                 </a>
             </div>

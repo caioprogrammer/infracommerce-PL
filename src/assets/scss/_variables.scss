@@ -33,25 +33,79 @@ $principal-border: #cccccc;
     font-style: normal
 }
 
-ul {
-    &.list {
-        a {
-            position: relative;
-            &::after {
-                content: "";
-                width: 0%;
-                height: 1px;
-                background-color: $principal-blue;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                transition: ease .5s width;
-            }
-            &:hover {
-                &::after {
-                    width: 100%;
-                }
-            }
-        }
+// ul {
+//     &.list {
+//         a {
+//             position: relative;
+//             &::after {
+//                 content: "";
+//                 width: 0%;
+//                 height: 1px;
+//                 background-color: $principal-blue;
+//                 position: absolute;
+//                 bottom: 0;
+//                 left: 0;
+//                 transition: ease .5s width;
+//             }
+//             &:hover {
+//                 &::after {
+//                     width: 100%;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.fa-chevron-right {
+    font-size: .625rem;
+    color: #000;
+    font-weight: 600;
+    padding-left: 4px;
+}
+
+.fa-caret-down {
+    padding-left: 4px;
+    color: #000;
+}
+
+
+
+
+
+a,
+.a {
+    &.hoverEffect {
+        @include hoverEffect;
+    }
+}
+
+* {
+    font-family: 'Santral W01';
+    box-sizing: border-box;
+}
+.backdrop {
+    visibility: hidden;
+    right: 0;
+    bottom: 0;
+    height: 120vh;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &__active {
+        visibility: visible;
+    }
+}
+.only-mobile {
+    display: none;
+    @media screen and (max-width: 992px) {
+        display: block;
+    }
+}
+.only-desktop {
+    display: block;
+    @media screen and (max-width: 992px) {
+        display: none;
     }
 }

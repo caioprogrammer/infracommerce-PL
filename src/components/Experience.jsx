@@ -14,7 +14,7 @@ function Experience() {
                                     <source type="image/webp" media="(max-width: 900px)" srcSet={experience.icon} />
                                     <source media="(max-width: 900px)" srcSet={experience.icon} />
                                     <source type="image/webp" srcSet={experience.icon} />
-                                    <img src="" />
+                                    <img  loading='lazy' src="" />
                                 </picture>
                                 <div className="card-infos">
                                     <div className="title">{experience.firstText}</div>

@@ -13,7 +13,7 @@ function Categories() {
             {categories.map((category) => {
                 return (
                     <div className='item' key={category.id}>
-                        <img className='item-image' src={category.image} alt={category.title} />
+                        <img loading='lazy' className='item-image' src={category.image} alt={category.title} />
                         <a className='hoverEffect item-link' href={category.link}>
                             {category.title}
                         </a>

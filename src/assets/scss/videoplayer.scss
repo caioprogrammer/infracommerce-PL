@@ -1,0 +1,81 @@
+.videoPlayer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+    &__container {
+        max-width: 1600px;
+        &.float {
+            position: relative;
+            text-align: center;
+            .videoPlayer__content {
+                position: absolute;
+                bottom: 0;
+                padding-bottom: 54px;
+                background: -webkit-gradient(linear,left top,left bottom,from(transparent),to(rgba(0,0,0,.7)));
+                background: linear-gradient(180deg,transparent,rgba(0,0,0,.7));
+                width: 100%;
+                padding: 16px;
+                .title, .subtitle {
+                    color: #ffffff;
+                    max-width: 525px;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                span {
+                    max-height: none;
+                    display: inline-block;
+                    height: 40px;
+                    width: auto;
+                    padding: 12px 24px;
+                    border: 1px solid #000;
+                    background-color: #fff;
+                    color: #000;
+                    line-height: .875;
+                    text-align: center;
+                    margin: 24px 0;
+                }
+            }
+        }
+        &.no-float {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media screen and (max-width: 992px){
+                flex-direction: column;
+            }
+            .video {
+                max-width: 70%;
+                @media screen and (max-width: 992px){
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    &__content {
+        padding: 0 50px;
+        width: 30%;
+        @media screen and (max-width: 992px){
+            width: 100%;
+        }
+        .title {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: #000;
+            line-height: 1.33;
+        }
+        .subtitle {
+            font-size: .875rem;
+            line-height: 24px;
+            padding-top: 10px;
+            font-weight: 300;
+            padding-bottom: 14px;
+        }
+    }
+    &:last-child {
+        text-align: center;
+        .title {
+            padding-top: 40px;
+        }
+    }
+}

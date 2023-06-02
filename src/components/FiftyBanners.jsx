@@ -11,7 +11,7 @@ function FiftyBanners() {
                                 <source type="image/webp" media="(max-width: 900px)" srcSet={item.image} />
                                 <source type="image/webp" srcSet={item.image} />
                                 <source media="(max-width: 900px)" srcSet={item.image} />
-                                <img src={item.image} />
+                                <img  loading='lazy' src={item.image} />
                             </picture>
                             <h3 className="title">
                                 {item.title}

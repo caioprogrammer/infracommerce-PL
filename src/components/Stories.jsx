@@ -11,7 +11,7 @@ function Stories() {
                             {story.image != "" && 
                                 <picture>
                                     <source type="image/webp" srcSet={story.image} />
-                                    <img src={story.image} alt={story.title} />
+                                    <img  loading='lazy' src={story.image} alt={story.title} />
                                 </picture>
                             }
                             <div className="card-infos">

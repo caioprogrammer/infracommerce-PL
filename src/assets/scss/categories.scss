@@ -1,0 +1,40 @@
+.categories {
+    padding: 60px 52px;
+    display: block;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    &__content {
+        padding: 0;
+        margin: 0 -8px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        @media screen and (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .item {
+            padding: 0 8px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.71;
+        }
+    }
+    &__information {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        h3 {
+            font-size: 24px;
+            color: #000;
+            font-weight: 600;
+        }
+        h4 {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 1.71;
+            padding-bottom: 30px;
+        }
+    }
+}

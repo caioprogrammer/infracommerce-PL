@@ -1,26 +1,24 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { products } from "../constants/data";
-
-function ProductCard({product}) {
-        return (
-            <li className="product">
-            <img 
-            src={product.src}
-            alt={product.title}
-            />
-            <button id={product.id} >
-                <span style={{pointerEvents: 'none'}}>
-                    COMPRAR
-                </span> 
-            </button>
-        </li>
-        )
-}
 
 function FloatCart() {
     const [hasProduct, setHasProduct] = useState(true);
-    const inCartProducts = JSON.parse(localStorage.getItem('products'))
+    const inCartProducts = JSON.parse(localStorage.getItem('products'));
+    const createElement = function (){
+        if(inCartProducts) {
+            inCartProducts.map((item) => {
+                var temp = document.createElement('div');
+                temp.innerHTML = item;
+                updateCart(temp);
+            })
+        }
+    }
+    const updateCart = function (arr) {
+        document.querySelector(".aside__content ul").appendChild(arr);
+    }
+    useEffect(() => {
+        createElement();
+    })
     return (
         <>
             <aside className="aside">
@@ -38,14 +36,7 @@ function FloatCart() {
                 }
                 
                 <div className="aside__content">
-                    <ul>
-                        {/* {products.map((product, index) => (
-                            <ProductCard 
-                                key={index} 
-                                product={product} 
-                            />
-                        ))}    */}
-                    </ul>
+                    <ul></ul>
                 </div>
                 
             </aside>

@@ -78,7 +78,7 @@ function Header() {
               </div>
             </div>
             <div className="central">
-              <img src={LogoHeader} alt="Logo Tiffany" />
+              <img  loading='lazy' src={LogoHeader} alt="Logo Tiffany" />
             </div>
             <div className="right">
               <div className="appointment">

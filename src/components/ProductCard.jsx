@@ -1,15 +1,15 @@
 function ProductCard({product}) {
     return (
-        <li className="product">
-          <img 
+        <li className="product" id={product.id}>
+          <img  loading='lazy' style={{pointerEvents: 'none'}}
             src={product.src}
             alt={product.title}
           />
-          {/* <button id={product.id} >
-            <span style={{pointerEvents: 'none'}}>
-                COMPRAR
-            </span> 
-          </button> */}
+          <div className="product__infos">
+            <div className="name">{product.title}</div>
+            <div className="price">$ {product.price}</div>
+          </div>
+          {/* <button id="remove">Remove</button> */}
         </li>
     )
 }

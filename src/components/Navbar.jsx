@@ -192,7 +192,7 @@ function Navbar() {
                         </ul>
                         <ul className="list">
                             <li className="has-image">
-                                <img src="//media.tiffany.com/is/image/tiffanydm/WATCH-Flyout-Desktop?$tile$&amp;wid=1168&amp;hei=608" alt="Watches"></img>
+                                <img  loading='lazy' src="//media.tiffany.com/is/image/tiffanydm/WATCH-Flyout-Desktop?$tile$&amp;wid=1168&amp;hei=608" alt="Watches"></img>
                                 <span>It's About Time</span>
                             </li>
                             <li>

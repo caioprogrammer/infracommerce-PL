@@ -1,0 +1,15 @@
+.showcase {
+    padding: 40px 0;
+    .slider {
+        padding: 0 52px;
+        @media screen and (max-width: 992px) {
+            padding: 0 16px;
+        }
+
+        .product {
+            &__infos {
+                display: none;
+            }
+        }
+    }
+}

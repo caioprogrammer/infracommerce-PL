@@ -1,0 +1,31 @@
+.swiper {
+    &-button {
+        &-next, &-prev {
+            width: 52px;
+            height: 52px;
+            background-color: #ffffff;
+            &::after {
+                font-size: 0;
+            }
+        }
+        &-next {
+            &::after {
+                background-image: url(./assets/images/normal/arrow-swiper.svg);
+                background-size: 100%;
+                width: 24px;
+                height: 24px;
+                background-repeat: no-repeat;
+            }
+        }
+        &-prev {
+            &::after {
+                background-image: url(./assets/images/normal/arrow-swiper.svg);
+                background-size: 100%;
+                width: 24px;
+                height: 24px;
+                background-repeat: no-repeat;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
